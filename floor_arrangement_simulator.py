@@ -127,15 +127,20 @@ class Floor(Surface):
         panels_count = sum(map(lambda r: len(r.panels), self.rows))
         lost_panels_count = len(self.lost_panels)
         lost_panels_area = sum(map(lambda p: p.area, self.lost_panels))/AREA_FACTOR
+        print("-------------------------")
         print(f"TOTAL AREA ({self.x}x{self.y}): {self.area/AREA_FACTOR:.2f}")
         print(f"PANELS COUNT: {panels_count}")
         print(f"PANELS LOST COUNT: {lost_panels_count}, AREA: {lost_panels_area}")
+        print("-------------------------")
         for i, r in enumerate(self.rows):
             print(f"ROW {i}: {r}")
+        print("-------------------------")
         for p, n in Floor.count_panels(self.panels).items():
             print(f"PANEL {p}: {n}")
+        print("-------------------------")
         for p, n in Floor.count_panels(self.lost_panels).items():
             print(f"PANEL LOST {p}: {n}")
+        print("-------------------------")
         
 
 class Panel(Surface):
