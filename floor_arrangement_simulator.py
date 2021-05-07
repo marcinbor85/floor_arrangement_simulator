@@ -178,7 +178,7 @@ class Panel(Surface):
 
 if __name__ == "__main__":
 
-    parser = argparse.ArgumentParser(description='Floor arrangement tool')
+    parser = argparse.ArgumentParser(description='Floor arrangement simulator')
     parser.add_argument('-pl', dest='panel_length', type=float, default=108, help='panel length (default=108)')
     parser.add_argument('-pw', dest='panel_width', type=float, default=13, help='panel width (default=13)')
     parser.add_argument('-l', dest='floor_length', type=float, default=402, help='floor length (default=402)')
